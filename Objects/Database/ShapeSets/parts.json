@@ -1,0 +1,64 @@
+{
+   "partList" : [
+       {
+           "uuid": "a2cd5dea-1559-48ed-99ec-b482d75af652",
+           "renderable": {
+               "lodList": [
+                   {
+                       "subMeshList": [
+                           {
+                               "textureList": [
+                                   "$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_dif.tga",
+                                   "$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_asg.tga",
+                                   "",
+                                   "$GAME_DATA/Objects/Textures/fittings/obj_fittings_ducts_ao.tga"
+                               ],
+                               "material": "DifAsgAo"
+                           }
+                       ],
+                       "mesh": "$GAME_DATA/Objects/Mesh/fittings/obj_fittings_ductbend.fbx",
+                       "includes": [ "POSITION", "UV0", "UV1", "NORMAL", "TANGENTS" ]
+                   }
+               ]
+           },
+           "color": "c36512",
+           "box": { "x": 1, "y": 1, "z": 1 },
+           "rotationSet": "PropYmZm",
+           "sticky": "-Y+Y-Z+Z",
+           "scripted": {
+               "filename": "$MOD_DATA/Scripts/interactables/CustomConnectionParent.lua",
+               "classname": "CustomConnectionParent"
+           }
+       },
+       {
+           "uuid": "8c31a7b9-b0ee-4aaf-bc72-59164a741305",
+           "renderable": {
+               "lodList": [
+                   {
+                       "subMeshList": [
+                           {
+                               "textureList": [
+                                   "$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_dif.tga",
+                                   "$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_asg.tga",
+                                   "",
+                                   "$GAME_DATA/Objects/Textures/fittings/obj_fittings_ducts_ao.tga"
+                               ],
+                               "material": "DifAsgAo"
+                           }
+                       ],
+                       "mesh": "$GAME_DATA/Objects/Mesh/fittings/obj_fittings_ductbend.fbx",
+                       "includes": [ "POSITION", "UV0", "UV1", "NORMAL", "TANGENTS" ]
+                   }
+               ]
+           },
+           "color": "c36512",
+           "box": { "x": 1, "y": 1, "z": 1 },
+           "rotationSet": "PropYmZm",
+           "sticky": "-Y+Y-Z+Z",
+           "scripted": {
+               "filename": "$MOD_DATA/Scripts/interactables/CustomConnectionChild.lua",
+               "classname": "CustomConnectionChild"
+           }
+       }
+   ]
+}

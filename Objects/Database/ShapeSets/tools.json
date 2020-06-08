@@ -1,0 +1,41 @@
+{
+   "partList" : [
+       {
+           "uuid": "532a91b1-57cd-4458-b086-504d1a4b0beb",
+
+           /* Tool UUID of Modded Tool, leave this as it is */
+           "autoTool": "e74ff990-adac-434f-9967-bf9833d0bd69",
+
+           /* How tool appears in the preview window */
+           "renderable": {
+               "lodList": [
+                   {
+                       "subMeshList": [
+                           {
+                               "textureList": [
+                                   "$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_dif.tga",
+                                   "$GAME_DATA/Objects/Textures/industrial/obj_atlas_generic_asg.tga",
+                                   "",
+                                   "$GAME_DATA/Objects/Textures/fittings/obj_fittings_ducts_ao.tga"
+                               ],
+                               "material": "DifAsgAo"
+                           }
+                       ],
+                       "mesh": "$GAME_DATA/Objects/Mesh/fittings/obj_fittings_ductbend.fbx",
+                       "includes": [ "POSITION", "UV0", "UV1", "NORMAL", "TANGENTS" ]
+                   }
+               ]
+           },
+           "color": "0b9ade",
+
+           /* So the tool cannot be placed on the ground as part */
+           "box": {
+               "x": 10000000,
+               "y": 10000000,
+               "z": 10000000
+           },
+           "rotationSet": "PropY",
+           "sticky": "+Y"
+       }
+   ]
+}
