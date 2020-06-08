@@ -9,27 +9,6 @@ sm.tool.preloadRenderables( renderablesTp )
 sm.tool.preloadRenderables( renderablesFp )
 
 function CustomTool.client_onCreate(self)
-    self:loadAnimations()
-end
-
-function CustomTool.loadAnimations( self )
-	self.tpAnimations = createTpAnimations(
-		self.tool,
-		{
-			idle = { "bucket_idle", { looping = true } },
-		}
-	)
-	setTpAnimation( self.tpAnimations, "idle", 5.0 )
-
-	if self.tool:isLocal() then
-		self.fpAnimations = createFpAnimations(
-			self.tool,
-			{
-				idle = { "bucket_idle", { looping = true } },
-			}
-		)
-        setFpAnimation( self.fpAnimations, "idle", 0.25 )
-	end
 end
 
 function CustomTool.client_onEquippedUpdate(self, primaryState, secondaryState, forceBuild)
@@ -37,15 +16,4 @@ function CustomTool.client_onEquippedUpdate(self, primaryState, secondaryState, 
         sm.gui.chatMessage('You left-clicked using your custom tool')
     end
     return true, false
-end
-
-function CustomTool.client_onUpdate(self)
-end
-
-function CustomTool.client_onEquip(self)
-    self.tool:setTpRenderables( renderablesTp )
-    self.tool:setFpRenderables( renderablesFp )
-end
-
-function CustomTool.client_onUnequip(self)
 end
