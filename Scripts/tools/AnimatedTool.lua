@@ -2,7 +2,7 @@ dofile "$GAME_DATA/Scripts/game/AnimationUtil.lua"
 dofile "$SURVIVAL_DATA/Scripts/util.lua"
 dofile "$SURVIVAL_DATA/Scripts/game/survival_shapes.lua"
 
-AnimatedTool = sm.interop.tools.createClass(nil)
+AnimatedTool = sm.interop.tools.createClass('AnimatedTool', nil)
 
 local emptyRenderables = {
 	"$SURVIVAL_DATA/Character/Char_bucket/char_bucket_empty.rend"
