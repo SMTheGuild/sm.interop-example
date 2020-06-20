@@ -5,7 +5,7 @@ local uuid = '29776957-9e0e-4e5e-a9a0-dd1177967ca0'
 local version = '1.0.0'
 local partUuid = 'a2cd5dea-1559-48ed-99ec-b482d75af652'
 local startupScripts = {
-    ['registrations'] = 'Scripts/registrations.lua'
+    { name = 'registrations', fileName = 'Scripts/registrations.lua', dependencies = {} }
 }
 
 -- Skip if the mod is already loaded
@@ -23,6 +23,6 @@ end
 
 -- Register the mod with sm.interop, and register startup scripts
 mod = sm.interop.mods.register(namespace, name, author, sm.uuid.new(uuid), version, sm.uuid.new(partUuid))
-for k, v in pairs(startupScripts) do
-    sm.interop.startup.register(mod, k, v)
+for _, startupScript in pairs(startupScripts) do
+    sm.interop.startup.register(mod, startupScript.name, startupScript.fileName, startupScript.dependencies)
 end
