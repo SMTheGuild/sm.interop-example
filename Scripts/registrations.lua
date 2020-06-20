@@ -12,7 +12,7 @@ sm.interop.tools.register(mod, 'custom-tool', 'Scripts/tools/CustomTool.lua', 'C
 sm.interop.tools.attach('yourname/modname:custom-tool', sm.uuid.new('532a91b1-57cd-4458-b086-504d1a4b0beb'))
 
 -- Load custom command functions
-dofile 'commands/custom-command.lua'
+dofile 'commands/MyCustomCommand.lua'
 
--- Register custom commands, callable using /mod <command-name>
-sm.interop.commands.register(mod, 'custom-command', myCustomCommand)
+-- Register custom commands, callable using /<command-name> and /mod <command-name>
+sm.interop.commands.register(mod, 'custom-command', MyCustomCommand)
